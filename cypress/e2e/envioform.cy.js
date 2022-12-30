@@ -47,6 +47,15 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         cy.get('.table > tbody > tr').contains('td', address)
         cy.get('.table > tbody > tr').contains('td', 'Uttar Pradesh Lucknow')
         cy.get('#closeLargeModal').click({force:true})
+    })
+  })
 
+  describe('selecaoGrid', () => {
+    it('FP-selecionar Grids', () => {
+      cy.visit('https://demoqa.com/selectable')
+      cy.get('#demo-tab-grid').click()
+      cy.contains('li', 'Two').click()
+      cy.contains('li', 'Five').click()
+      cy.contains('li', 'Seven').click()
     })
   })
