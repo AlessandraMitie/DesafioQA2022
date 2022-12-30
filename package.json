@@ -1,0 +1,26 @@
+{
+  "name": "desafioqa2022",
+  "version": "1.0.0",
+  "description": "Desafio QA",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlessandraMitie/DesafioQA2022.git"
+  },
+  "author": "Alessandra Kikuchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlessandraMitie/DesafioQA2022/issues"
+  },
+  "homepage": "https://github.com/AlessandraMitie/DesafioQA2022#readme",
+  "devDependencies": {
+    "cypress": "^12.2.0",
+    "Faker": "^0.7.2"
+  },
+  "dependencies": {
+    "faker": "^6.6.6"
+  }
+}
