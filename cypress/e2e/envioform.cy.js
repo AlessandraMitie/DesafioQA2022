@@ -50,6 +50,8 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     })
   })
 
+
+
   describe('selecaoGrid', () => {
     it('FP-selecionar Grids', () => {
       cy.visit('https://demoqa.com/selectable')
@@ -58,4 +60,16 @@ Cypress.on('uncaught:exception', (err, runnable) => {
       cy.contains('li', 'Five').click()
       cy.contains('li', 'Seven').click()
     })
+  })
+
+
+//https://github.com/4teamwork/cypress-drag-drop
+  describe('Drag and Drop', () => {
+
+    it('FP-drag and Drop', () => {
+      cy.visit('https://demoqa.com/droppable')
+      cy.get('#draggable').drag('#droppable', {force:true})
+      cy.get('#droppable').contains('Dropped!')
+    })
+    
   })

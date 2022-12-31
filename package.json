@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/AlessandraMitie/DesafioQA2022#readme",
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.3",
     "cypress": "^12.2.0",
     "Faker": "^0.7.2"
   },
   "dependencies": {
+    "cypress-drag-drop": "^1.1.1",
     "faker": "^6.6.6"
   }
 }
