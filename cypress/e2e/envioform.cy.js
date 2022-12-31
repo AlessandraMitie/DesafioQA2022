@@ -5,14 +5,14 @@ var lastName = faker.Name.lastName();
 var email = faker.Internet.email();
 var address = faker.Address.streetAddress();
 
-// evitar erros ads
+// evitar erros ads do site
 Cypress.on('uncaught:exception', (err, runnable) => {
     // returning false here prevents Cypress from failing the test
     return false
   })
   
-  describe('envioDeFormulario', () => {
-    it('FP-enviar formulario', () => {
+  describe('Envio De Formulario', () => {
+    it('FP - Envio de Formulario', () => {
         cy.visit('https://demoqa.com/automation-practice-form')
         cy.get('.main-header').should('have.text', 'Practice Form')
         cy.get('#firstName').type(firstName)
@@ -50,10 +50,8 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     })
   })
 
-
-
-  describe('selecaoGrid', () => {
-    it('FP-selecionar Grids', () => {
+  describe('Selecionar Grids', () => {
+    it('FP - Slecionar Grids', () => {
       cy.visit('https://demoqa.com/selectable')
       cy.get('#demo-tab-grid').click()
       cy.contains('li', 'Two').click()
@@ -62,14 +60,11 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     })
   })
 
-
 //https://github.com/4teamwork/cypress-drag-drop
   describe('Drag and Drop', () => {
-
-    it('FP-drag and Drop', () => {
+    it('FP - Drag and Drop', () => {
       cy.visit('https://demoqa.com/droppable')
       cy.get('#draggable').drag('#droppable', {force:true})
       cy.get('#droppable').contains('Dropped!')
     })
-    
   })
